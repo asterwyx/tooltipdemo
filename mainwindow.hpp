@@ -1,10 +1,10 @@
-#include <DMainWindow>
-
+#include <QMainWindow>
 #include <DListView>
 #include <DLabel>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QGroupBox>
+#include <QComboBox>
 
 
 DWIDGET_USE_NAMESPACE
@@ -27,5 +27,8 @@ private:
     QVBoxLayout *m_listViewLayout;
     QVBoxLayout *m_labelLayout;
     QStandardItemModel *m_model;
-
+    QLabel *m_listViewHint;
+    QComboBox *m_listViewSelector;
+    QLabel *m_labelHint;
+    QComboBox *m_labelSelector;
 };
