@@ -5,16 +5,18 @@ project(tooltipdemo
     LANGUAGES CXX
 )
 
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 find_package(DtkWidget REQUIRED)
 
 add_executable(tooltipdemo)
 
 target_sources(tooltipdemo PRIVATE
     main.cpp
-    mainwindow.hpp
+    mainwindow.h
     mainwindow.cpp
-    selectormodel.hpp
-    selectormodel.cpp
 )
 
 target_link_libraries(tooltipdemo PRIVATE Dtk::Widget)
